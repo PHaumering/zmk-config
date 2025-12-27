@@ -24,17 +24,11 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 &mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
+    quick-tap-ms = <125>;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
 };
 
-&lt {
-    tapping-term-ms = <240>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
-};
+&lt { quick-tap-ms = <125>; };
 
 / {
     behaviors {
@@ -58,31 +52,44 @@
         Base {
             display-name = "Base";
             bindings = <
-               &kp Q     &kp W  &kp E           &kp R           &kp T            &kp DE_Z  &kp U      &kp I        &kp O    &kp P
-               &kp A     &kp S  &kp D           &kp F           &kp G            &kp H     &kp J      &kp K        &kp L    &kp DE_O_UMLAUT
-&mt LSHFT TAB  &kp DE_Y  &kp X  &kp C           &kp V           &kp B            &kp N     &kp M      &kp COMMA    &kp DOT  &kp DE_MINUS     &mt RSHFT ENTER
-                                &mt LCTRL HOME  &mt LGUI SPACE  &mt LALT BSPC    &kp DEL   &kp SPACE  &lt Sym END
+         &kp Q           &kp W           &kp E               &kp R             &kp T            &kp DE_Z  &kp U              &kp I                &kp O            &kp P
+         &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G            &kp H     &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &mt RIGHT_GUI DE_O_UMLAUT
+&kp TAB  &kp DE_Y        &kp X           &kp C               &kp V             &kp B            &kp N     &kp M              &kp COMMA            &kp DOT          &kp DE_MINUS               &kp ENTER
+                                         &lt 1 HOME          &kp SPACE         &kp BACKSPACE    &kp DEL   &kp SPACE          &lt 3 END
             >;
         };
 
-        Nav {
-            display-name = "Nav";
+        NUM {
             bindings = <
-              &kp TILDE       &trans     &kp UP_ARROW  &trans     &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-              &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp LEFT_WIN    &kp MINUS  &trans        &kp PLUS   &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
-                                         &trans        &trans     &trans      &trans    &trans        &kp DOT
+              &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5    &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_N0
+              &trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans
+&kp DE_CARET  &trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans     &kp DE_SZ
+                                    &trans     &trans     &trans       &trans     &trans     &to 2
             >;
+
+            label = "Numbers";
         };
 
-        Sym {
-            display-name = "Sym";
+        FN {
             bindings = <
-            &kp EXCL  &kp DE_DOUBLE_QUOTES  &kp DE_SECTION  &kp DOLLAR  &kp PERCENT    &kp DE_AMPERSAND  &kp DE_SLASH  &kp DE_LPAR  &kp DE_RPAR  &kp DE_EQUAL
-            &trans    &trans                &trans          &trans      &trans         &trans            &trans        &trans       &trans       &trans
-&kp DE_DEG  &trans    &trans                &trans          &trans      &trans         &trans            &trans        &trans       &trans       &trans        &kp DE_GRAVE
-                                            &trans          &trans      &trans         &trans            &trans        &trans
+         &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&kp ESC  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &kp F11
+                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            label = "Function";
+        };
+
+        NAV {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp UP    &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp DOWN  &trans     &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans    &trans
+            >;
+
+            label = "Navigation";
         };
     };
 };
