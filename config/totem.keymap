@@ -53,7 +53,7 @@
          &kp Q           &kp W           &kp E               &kp R             &kp T            &kp DE_Z  &kp U              &kp I                &kp O            &kp P
          &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G            &kp H     &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &mt RIGHT_GUI DE_O_UMLAUT
 &kp TAB  &kp DE_Y        &kp X           &kp C               &kp V             &kp B            &kp N     &kp M              &kp COMMA            &kp DOT          &kp DE_MINUS               &kp ENTER
-                                         &lt 1 HOME          &kp SPACE         &kp BACKSPACE    &kp DEL   &kp SPACE          &lt 3 END
+                                         &lt 1 HOME          &kp SPACE         &kp BACKSPACE    &kp DEL   &kp SPACE          &lt 2 END
             >;
         };
 
@@ -62,7 +62,7 @@
               &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5    &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_N0
               &trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans
 &kp DE_CARET  &trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans     &kp DE_SZ
-                                    &trans     &trans     &trans       &trans     &trans     &to 2
+                                    &trans     &trans     &trans       &trans     &trans     &trans
             >;
 
             label = "Numbers";
@@ -70,24 +70,13 @@
 
         FN {
             bindings = <
-         &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&kp ESC  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &kp F11
-                         &trans  &trans  &trans    &trans  &trans  &trans
+         &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7    &kp F8    &kp F9     &kp F10
+         &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp UP    &kp RIGHT  &trans
+&kp ESC  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp DOWN  &trans     &trans   &kp F11
+                         &trans  &trans  &trans    &trans  &trans    &trans
             >;
 
             label = "Function";
-        };
-
-        NAV {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp UP    &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp DOWN  &trans     &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans    &trans
-            >;
-
-            label = "Navigation";
         };
     };
 };
